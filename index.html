@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Duncan Gaines | CS Student</title>
+
+        <style>
+            :root {
+                --bg: #1f3b4d;
+                --text: #F4F6F8;
+                --muted: #b8c7d3;
+                --accent: #8fd3ff;
+                --surface: #2a4a5e;
+            }
+            body {
+                background-color: var(--bg);
+                color: var(--text);
+                font-family: system-ui, sans-serif;
+                line-height: 1.6;
+                margin: 0;
+            }
+
+            main {
+                max-width: 40rem;
+                margin: 0 auto;
+                padding: 2rem 1rem;
+            }
+
+            header {
+                text-align: center;
+            }
+
+            h1 {
+                font-size: 2.75rem;
+                line-height: 1.1;
+                margin: 0 0 0.5rem;
+            }
+
+            
+            .skills, .links {
+                justify-content: center;
+            }
+
+            .tagline {
+                color: var(--accent);
+                font-size: 1.25rem;
+                margin: 0 0 1rem;
+            }
+
+            .about {
+                color: var(--muted);
+                margin: 0;
+            }
+
+            section {
+                margin-top: 3rem;
+            }
+
+            h2{
+                font-size: 1rem;
+                text-transform: uppercase;
+                letter-spacing: 0.1rem;
+                color: var(--muted);
+                margin: 0 0 1rem;
+                text-align: center;
+            }
+
+            .skills {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0.5rem;
+            }
+
+            .skills li {
+                background-color: var(--surface);
+                padding: 0.25rem 0.875rem;
+                border-radius: 999px;
+                font-size: 0.95rem;
+            }
+
+            .links {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0.75rem;
+            }
+
+            .button {
+                display: inline-block;
+                padding: 0.6rem 1.2rem;
+                border: 1px solid var(--accent);
+                border-radius: 0.375rem;
+                color: var(--accent);
+                text-decoration: none;
+            }
+
+            .button:hover {
+                background-color: var(--accent);
+                color: var(--bg);
+            }
+
+            footer {
+                margin-top: 4rem;
+                color: var(--muted);
+                font-size: 0.875rem;
+                text-align: center;
+            }
+
+            @media (max-width: 600px) {
+                .about-me p {
+                    text-wrap: balance;
+                }
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <main>
+            <header>
+                <h1>Duncan Gaines</h1>
+                <p class="tagline">Chicago/Seattle CS Student</p>
+                <p class="about">Studying Computer Science at UIC · Expected graduation December 2027</p>
+            </header>
+
+            <section>
+                <h2>Skills</h2>
+                <ul class="skills">
+                    <li>Java</li>
+                    <li>C++</li>
+                    <li>C</li>
+                    <li>Python</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Contact</h2>
+                <div class="links">
+                    <a class="button" href="https://github.com/Duncan-Gaines">GitHub</a>
+                    <a class="button" href="mailto:duncan.gaines@outlook.com">duncan.gaines@outlook.com</a>
+                    <a class="button" href="https://linkedin.com/in/duncan-gaines">LinkedIn</a>
+                </div>
+            </section>
+
+            <section>
+                <h2>About me</h2>
+                <p>Ever since getting a Nintendo 64 and playing Mario Kart with my sisters as a kid, I developed a love for gaming. With that love I gained a fascination with computers and all the seemingly magical things we could do with them.</p>
+
+                <p>That love made me want to learn how to do everything there is with computers. From learning how to inspect elements on browser pages and temporarily altering the HTML files, to actually using C++ to take in massive amounts of data and store it in classes that are readable and searchable.</p>
+
+                <p>I am hoping to keep learning as much about computers as possible and use the skills I gain from all the experience I have to further develop any and all projects I work on.</p>
+            </section>
+
+            <footer>
+                <p>Built from scratch with HTML and CSS.</p>
+            </footer>
+            
+            <!-- How to make images
+                <img src="(file path)" alt="(description for computers/on screen readers)" /> 
+        
+                How to make links
+                <a href="(link)">(link title)</a>
+
+            -->
+
+            
+
+        </main>
+        
+
+    </body>
+
+</html>
