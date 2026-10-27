@@ -123,6 +123,21 @@
                 opacity: 0.8;
             }
 
+            button.button-image {
+                background: none;
+                border: none;
+                padding: 0;
+                cursor: pointer;
+            }
+
+            .copy-status {
+                text-align: center;
+                color: var(--muted);
+                font-size: 0.875rem;
+                min-height: 1.6em;
+                margin: 0.75rem 0 0;
+            }
+
             .about-me p {
                 text-align: center;
             }
@@ -157,14 +172,17 @@
                         <img src="github.png" alt="GitHub">
                     </a>
 
-                    <a class = "button-image" href="mailto:duncan.gaines@outlook.com">
-                        <img src="email.png" alt="Email">
-                    </a>
+                    <button class = "button-image" id = "copy-email" type="button">
+                        <img src="email.png" alt="Copy Email Address">
+                    </button>
 
                     <a class = "button-image" href="https://linkedin.com/in/duncan-gaines">
                         <img src="linkedin.png" alt="LinkedIn">
                     </a>
                 </div>
+
+                <p id="copy-status" class="copy-status" aria-live="polite"></p>
+
             </section>
 
             <section class="about-me">
@@ -187,6 +205,28 @@
             -->
 
         </main>
+
+
+        <script>
+            const emailButton = document.getElementById("copy-email");
+            const copyStatus = document.getElementById("copy-status");
+            const email = "duncan.gaines@outlook.com";
+            let timer;
+
+            emailButton.addEventListener("click", async () => {
+                try {
+                    await navigator.clipboard.writeText(email);
+                    copyStatus.textContent = "Email copied to clipboard";
+                } catch (error) {
+                    copyStatus.textContent = "Failed to copy Email, My email is: " + email;
+                }
+
+                clearTimeout(timer);
+                timer = setTimeout(() => {
+                    copyStatus.textContent = "";
+                }, 3000);
+            });
+        </script>
 
     </body>
 
