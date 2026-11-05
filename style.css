@@ -110,7 +110,7 @@
 
             .button-image img:hover {
                 transform: scale(10);
-                opacity: 0.9;
+                opacity: 0.1;
             }
 
             .button-image img:active {
